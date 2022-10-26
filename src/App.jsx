@@ -1,15 +1,13 @@
-import { ChatEngine } from "react-chat-engine";
-import ChatFeed from "./Components/ChatFeed";
+import { Routes, Route } from "react-router-dom";
+import Main from "./Pages/Main";
+import Login from "./Pages/Login";
 
 const App = () => {
   return (
-    <ChatEngine
-      height="100vh"
-      projectID="703b7099-b8db-44f7-a019-232aec84654a"
-      userName="alnickelzonv"
-      userSecret="123456"
-      renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />}
-    />
+    <Routes>
+      <Route path="/main" element={<Main />} />
+      <Route path="/login" element={<Login />} />
+    </Routes>
   );
 };
 
